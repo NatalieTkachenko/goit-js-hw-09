@@ -61,7 +61,7 @@ const options = {
   onClose( selectedDates )
   {
     console.log( selectedDates[ 0 ] );
-    const selectedTime = selectedDates[ 0 ].getTime();
+    let selectedTime = selectedDates[ 0 ].getTime();
     console.log( selectedTime );
     console.log( Date.now() );
     if ( selectedTime <= Date.now() )
