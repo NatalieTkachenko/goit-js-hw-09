@@ -52,6 +52,7 @@ label.forEach( ( item ) =>
 
 
 startBtn.disabled = true;
+let selectedTime = 0;
 
 const options = {
   enableTime: true,
@@ -61,7 +62,7 @@ const options = {
   onClose( selectedDates )
   {
     console.log( selectedDates[ 0 ] );
-    let selectedTime = selectedDates[ 0 ].getTime();
+    selectedTime = selectedDates[ 0 ].getTime();
     console.log( selectedTime );
     console.log( Date.now() );
     if ( selectedTime <= Date.now() )
