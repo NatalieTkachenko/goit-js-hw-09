@@ -3,6 +3,9 @@ const stopBtn = document.querySelector( 'button[data-stop]' );
 const body = document.querySelector( 'body' );
 let intervalId = null;
 
+startBtn.disabled = false;
+stopBtn.disabled = true;
+
 console.log( body );
 console.log( startBtn );
 console.log( stopBtn );
@@ -23,6 +26,8 @@ stopBtn.addEventListener( 'click', stopSwitcherHandler );
 
 function switchColorHandler()
 {
+    startBtn.disabled = true;
+    stopBtn.disabled = false;
     if ( startBtn.classList.contains( 'isActive' ) )
     {
         console.log( 'Не тикай більше "Start"! Вже працює!' );
@@ -38,6 +43,8 @@ function switchColorHandler()
 
 function stopSwitcherHandler()
 {
+    startBtn.disabled = false;
+    stopBtn.disabled = true;
     startBtn.classList.remove( 'isActive' );
     clearInterval( intervalId );
     console.log('Норм колір, хай буде!)...Ну, якщо не подобається, тисни знову "Start"!')

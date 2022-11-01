@@ -91,6 +91,7 @@ function startTimerHandler()
   };
 
   startBtn.classList.add( 'active' );
+  
   let timeToParse = selectedTime - Date.now();
   const { days, hours, minutes, seconds } = convertMs( timeToParse );
   console.log( days, hours, minutes, seconds );
